@@ -145,7 +145,6 @@
   justify-content: center;
 }
 
-
 .product-badge-new {
   position: absolute;
   top: 0;
@@ -267,7 +266,7 @@
 }
 
 .product-about-title {
-  font-size: 1.875rem;
+  font-size: clamp(24px, 2.5vw, 30px);
   font-family: Nunito, sans-serif;
   font-weight: 700;
   text-transform: uppercase;
@@ -276,7 +275,7 @@
 }
 
 .product-about-description {
-  font-size: 1.125rem;
+  font-size: clamp(14px, 1.2vw, 16px);
   font-family: Nunito, sans-serif;
   font-weight: 400;
   line-height: 140%;
@@ -300,7 +299,7 @@
   min-width: 0;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: min(2.6vw, 50px);
 }
 
 .features-title {
@@ -317,7 +316,7 @@
 .features-list {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: min(2.6vw, 50px);
 }
 
 .feature-item {
@@ -328,12 +327,12 @@
 }
 
 .feature-icon {
-  width: 5.625rem;
+  width: clamp(60px, 5vw, 90px);
   flex-shrink: 0;
 }
 
 .feature-description {
-  font-size: 1.125rem;
+  font-size: clamp(12px, 1.2vw, 18px);
   font-family: Nunito, sans-serif;
   font-weight: 400;
   color: var(--text-subtle);
@@ -488,9 +487,6 @@
   .product-about-figure {
     padding: 6rem 0;
   }
-  .product-about-description {
-    font-size: 1rem;
-  }
 }
 
 @media (max-width: 48rem) {
@@ -607,16 +603,20 @@
 
   .features-content {
     flex-direction: column-reverse;
+    padding: 1.75rem 0;
   }
 
-  .feature-icon {
-    width: 60px;
+  .features-text {
+    gap: 1.25rem;
+  }
+
+  .features-title {
+    font-size: 1.5rem;
+    color: var(--text-primary);
   }
 
   .feature-description {
-    font-size: 12px;
     color: var(--text-primary);
-    width: 276px;
   }
 
   .cta-banner {
