@@ -70,6 +70,11 @@
   line-height: 20px;
 }
 
+.product-section-link:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 .carousel-wrapper {
   position: relative;
   display: flex;
@@ -106,6 +111,7 @@
   border: 1px solid var(--primary) !important;
   border-radius: 50% !important;
   color: transparent !important;
+  transition: 300ms;
 }
 
 .swiper-button-prev {
@@ -115,18 +121,29 @@
   right: -12px !important;
 }
 
+.swiper-button-prev .material-symbols-outlined,
+.swiper-button-next .material-symbols-outlined {
+  font-size: 18px;
+  line-height: 1;
+  color: var(--primary);
+  padding: 0.5rem;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  transition: 300ms;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: var(--primary) !important;
+}
+
+.swiper-button-prev .material-symbols-outlined:hover,
+.swiper-button-next .material-symbols-outlined:hover {
+  color: var(--text-on-primary);
+}
+
 .swiper-button-prev::after,
 .swiper-button-next::after {
   display: none !important;
-}
-
-.swiper-button-prev .material-symbols-outlined,
-.swiper-button-next .material-symbols-outlined {
-  font-size: 18px !important;
-  line-height: 1 !important;
-  color: var(--primary) !important;
-  padding: 0.5rem;
-  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25) !important;
 }
 
 .product-card {
@@ -227,6 +244,10 @@
   cursor: pointer;
   outline: none;
   border: none;
+}
+
+.product-btn-buy:hover {
+  background-color: var(--primary-hover);
 }
 
 .product-about {
@@ -481,6 +502,10 @@
   border: none;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.newsletter-btn:hover {
+  background-color: var(--primary-hover);
 }
 
 @media (max-width: 1024px) {
